@@ -1,1 +1,14 @@
 <h1>hello world</h1>
+
+<form id="new-post-form" action="/name">
+	<h5><input type="text" id="SearchName" name="SearchName"></h5>
+	<button>Find result</button>
+</form>
+
+<% if @name_data  %>
+
+<p><%= @name_data.name %></p>
+<p><%= @name_data.gender %></p>
+<p><%= @name_data.total %></p>
+
+<% end %>

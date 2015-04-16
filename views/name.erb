@@ -1,4 +1,16 @@
-<%= @result.inspect %>
+<% if @result  %>
 
-<%= @result['name'] %>
-<%= @result['gender'] %>
+<p>Name: <%= @result['name'] %> </p>
+<p>Gender: <%= @result['gender'] %> </p>
+<p>Est <%= @result['name'] %> roaming around you is <%= @result['total'] || @result['samples'] %>
+<p>Min age: <%= @result['min_age'] %></p>
+<p>Max Age: <%= @result['max_age'] %></p>
+<p>Best Name: <%= @result['best_name'] %></p>
+
+	<% if @charges.empty?  %>
+		<p> empty charges </p>
+	<% end %>
+
+<%= @charges %>
+
+<% end %>

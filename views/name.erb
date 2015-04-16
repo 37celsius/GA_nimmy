@@ -7,10 +7,10 @@
 <p>Max Age: <%= @result['max_age'] %></p>
 <p>Best Name: <%= @result['best_name'] %></p>
 
-	<% if @charges.empty?  %>
-		<p> empty charges </p>
-	<% end %>
-
-<%= @charges %>
+<ul class="ChargesList">
+<% @charges.each do |x| %>
+	<li><%= x %></li>
+<% end %>
+</ul>
 
 <% end %>

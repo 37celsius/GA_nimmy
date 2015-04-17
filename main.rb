@@ -29,7 +29,7 @@ end
 
 # This is where all the actions are
 get '/name' do
-	if !params[:SearchName].empty?
+	if !params[:SearchName].nil? && !params[:SearchName].empty?
 
 		# Create an instant variable that can be access anywhere
 		# The instant variable finding the name from the user input in our NameData Class which connecting to the nimmy table

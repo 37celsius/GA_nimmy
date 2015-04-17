@@ -2,7 +2,6 @@
 [logo]: https://github.com/37celsius/GA_nimmy/blob/master/public/nimmyLogo.jpg "nimmy"
 
 # nimmy - fun with name
----
 
 Experimental project for General Assembly, Web Development Immersive Course
 ---

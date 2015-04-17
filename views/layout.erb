@@ -1,13 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>nimmy - fun with your name</title>
-  <link rel='stylesheet' href='/stylesheets/main.css'>
-  <script src="javascripts/jquery.js"></script>
+  	<meta charset="UTF-8">
+  	<title>nimmy - fun with name</title>
+
+	<meta name="author" content="Beta Ngadiman">
+	<meta name="description" content="General Assembly Melbourne WDI Second project, creating a web application using Ruby">
+  	
+  	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Noticia+Text:700' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" href="/stylesheets/normalize.css">
+  	<link rel="stylesheet" href="/stylesheets/foundation.css">
+  	<link rel='stylesheet' href='/stylesheets/main.css'>
+
+	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+  	<!-- Viewport -->
+  	<meta name="viewport" content="width=device-width">
+
+  	<script src="javascripts/jquery.js"></script>
 </head>
 <body>
+	<header class="row">
+		<div class="small-6 small-centered medium-3 medium-centered columns"> 
+			<img class="nimmyLogo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgNTciPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik05LjQgMzIuOWMtMS45IDAtMy40IDEuMS00LjQgMi43di0wLjRDNSAzNCAzLjggMzMgMi41IDMzQzEuMiAzMyAwIDM0IDAgMzUuMXYxMmMwIDEuMiAxLjIgMi4xIDIuNSAyLjEgYzEuMyAwIDIuNS0wLjkgMi41LTIuMXYtNi41YzAtMi40IDEuNC0zLjIgMy4xLTMuMmMxLjYgMCAyLjkgMS4xIDIuOSAzLjJ2Ni41YzAgMS4yIDAuNyAyLjEgMiAyLjFjMS4zIDAgMi0wLjkgMi0yLjF2LTcuNSBDMTUgMzUuMSAxMyAzMi45IDkuNCAzMi45eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMS41IDMzYy0xLjMgMC0yLjUgMS0yLjUgMi4xdjEyYzAgMS4yIDEuMiAyLjEgMi41IDIuMWMxLjMgMCAyLjUtMC45IDIuNS0yLjF2LTEyQzI0IDM0IDIyLjggMzMgMjEuNSAzM3ogIi8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ2LjkgMzIuOWMtMS4xIDAtMy40IDAuNS00LjYgM2MtMS4xLTIuMi0yLjYtMy01LjItM2MtMS43IDAtMy4xIDEtNC4xIDIuNnYtMC40YzAtMS4yLTEuMi0yLjEtMi41LTIuMSBjLTEuMyAwLTIuNSAxLTIuNSAyLjF2MTJjMCAxLjIgMS4yIDIuMSAyLjUgMi4xYzEuMyAwIDIuNS0wLjkgMi41LTIuMXYtNi41YzAtMi40IDEuMS0zLjIgMi42LTMuMmMxLjQgMCAyLjQgMS4xIDIuNCAzLjF2Ni42IGMwIDEuMiAxLjIgMi4xIDIuNSAyLjFjMS4zIDAgMi41LTAuOSAyLjUtMi4xdi02LjVjMC0yLjMgMS0zLjIgMi41LTMuMmMxLjQgMCAyLjUgMS4xIDIuNSAzLjJ2Ni41YzAgMS4yIDEuMiAyLjEgMi41IDIuMSBjMS4zIDAgMi41LTAuOSAyLjUtMi4xdi03LjFDNTMgMzUuMyA1MC42IDMyLjkgNDYuOSAzMi45eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik03NS45IDMyLjljLTEgMC0yLjggMC40LTQgMi4xYy0wLjItMS45LTAuNC0zLjktMC45LTUuN0M2Ni45IDExLjggNTMuMiAwIDM2IDBDMTcuNSAwIDMuNyAxMS43IDAuNyAyOSBjLTAuMiAxLjQgMC43IDIuNiAyIDIuOWMxLjQgMC4yIDIuNy0wLjcgMi45LTJDOC4yIDE1IDIwLjEgNSAzNiA1YzE0LjggMCAyNi42IDEwLjMgMzAuMSAyNS40YzAuMiAwLjggMC40IDEuNyAwLjUgMi42IGMtMC4yIDAtMC4zIDAtMC41IDBjLTEuNyAwLTMuMSAxLTQuMSAyLjZ2LTAuNGMwLTEuMi0xLjItMi4xLTIuNS0yLjFjLTEuMyAwLTIuNSAxLTIuNSAyLjF2MTJjMCAxLjIgMS4yIDIuMSAyLjUgMi4xIGMxLjMgMCAyLjUtMC45IDIuNS0yLjF2LTYuNWMwLTIuNCAxLjEtMy4yIDIuNi0zLjJjMS40IDAgMi40IDEuMSAyLjQgMy4xdjYuNmMwIDEuMiAxLjIgMi4xIDIuNSAyLjFjMS4zIDAgMi41LTAuOSAyLjUtMi4xdi02LjUgYzAtMi4zIDEuNS0zLjIgMy0zLjJjMS40IDAgMyAxLjEgMyAzLjJ2Ni41YzAgMS4yIDAuNyAyLjEgMiAyLjFjMS4zIDAgMi0wLjkgMi0yLjF2LTcuMUM4MiAzNS4zIDc5LjcgMzIuOSA3NS45IDMyLjl6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTk4LjUgMzMuMWMtMS41LTAuNC0yLjYgMC4zLTMgMS40bC0zLjEgNy44bC0zLTcuOGMtMC40LTEuMS0xLjUtMS43LTMtMS40Yy0xLjIgMC4zLTEuOCAxLjYtMS40IDIuOCBsNSAxMS41bC0yLjcgNi42Yy0wLjUgMS4yIDAuMiAyLjYgMS40IDIuOWMxLjUgMC4zIDIuNi0wLjMgMy0xLjNMOTkuOSAzNkMxMDAuMyAzNC43IDk5LjYgMzMuNCA5OC41IDMzLjF6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM1LjQgMzAuMWMxLjYgMCAyLjktMS4yIDIuOS0yLjhzLTEuMy0yLjgtMi45LTIuOGMtMS42IDAtMyAxLjItMyAyLjhTMzMuOCAzMC4xIDM1LjQgMzAuMXoiLz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjEuNiAyNC42Yy0xLjYgMC0zIDEuMi0zIDIuOHMxLjQgMi44IDMgMi44YzEuNiAwIDIuOS0xLjIgMi45LTIuOFMyMy4yIDI0LjYgMjEuNiAyNC42eiIvPjwvc3ZnPg==" alt="nimmy" title="nimmy">
+		</div>
+	</header>
 
-  <%= yield %>
-
+	<section class="mainSection row">
+  		<%= yield %>
+	</section>
+	
+	<footer class="mainFooter row">
+		<div class="large-8 large-centered columns">
+			<div class="mainFooter-div large-6 columns">
+				<h5>&copy; 2015 Beta Ngadiman. <a href="https://generalassemb.ly/" title="General Assembly" alt="General Assembley" target="_blank">A General Assembly Project</a>.</h5>
+			</div>
+			<div class="mainFooter-div large-6 columns">
+				<nav>
+					<ul class="footerNav">
+						<li><a href="/about">About</a></li>
+						<li><a href="/privacypolicy">Privacy Policy</a></li>
+						<li><a href="/termsconditions">Terms &amp; Conditions</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</footer>
 </body>

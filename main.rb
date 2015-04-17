@@ -65,6 +65,17 @@ get '/name' do
 	erb :name
 end
 
+get '/about' do
+	erb :about
+end
+
+get '/privacypolicy' do
+  erb :privacypolicy
+end
+
+get '/termsconditions' do
+  erb :termsconditions
+end
 
 
 

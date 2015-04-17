@@ -1,0 +1,230 @@
+* {
+	transition: all 0.5s ease;
+}
+
+html {
+ 	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+ 	box-sizing: inherit;
+}
+
+body {
+	font-size: 16px;
+	margin: 0;
+	padding: 30px 20px 20px;
+	font-family: 'Quicksand', sans-serif;
+	background: rgb(238,184,64); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(238,184,64,1) 0%, rgba(229,173,61,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,184,64,1)), color-stop(100%,rgba(229,173,61,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(238,184,64,1) 0%,rgba(229,173,61,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(238,184,64,1) 0%,rgba(229,173,61,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(238,184,64,1) 0%,rgba(229,173,61,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(238,184,64,1) 0%,rgba(229,173,61,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeb840', endColorstr='#e5ad3d',GradientType=0 ); /* IE6-9 */
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+::-webkit-input-placeholder {
+   color: #FFFBBD;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFFBBD;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFFBBD;  
+}
+
+:-ms-input-placeholder {  
+   color: #FFFBBD;  
+}
+
+input[type=text]:focus, textarea:focus{ 
+	outline: none;
+}
+
+button:focus{
+	outline:0;
+}
+
+a {
+	color: #1F1300;
+}
+
+a:hover {
+	color: #FFFBBD;
+}
+
+.nimmyLogo {
+	width: 70%;
+	margin: 0 auto;
+	display: block;
+}
+
+.subTitle, .chargesListSection h4 {
+	color: #575236;
+	text-align: center;
+	font-family: 'Noticia Text', serif;
+}
+
+.mainSection {
+	margin: 15px auto;
+}
+
+.sectionInputDIV {
+	padding: 18vh 0 18vh 0;
+}
+
+.sectionNimmyResultDIV {
+	padding: 4vh 0 4vh 0;
+}
+
+.resultCards {     
+	background: rgba(253, 252, 231, 0.8);
+  padding: 20px;
+  margin-bottom: 20px;
+    box-shadow: 1px 1px 3px rgba(210, 151, 24, 0.8);
+}
+
+.firstResultCard{
+	  padding-bottom: 24px;
+}
+
+.resultCards h3 {
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(134, 122, 54, 0.45);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #5C4513;
+}
+
+.sectionNimmyResultDIV p {
+  color: #1a1a1a;
+	text-align: center;
+}
+
+#SearchName {
+	width: 100%;
+	height: 10vh;
+	border: 0;
+	background: none;
+	padding: 0 15px;
+	border-bottom: 2px solid #fafafa;
+	color: #fafafa;
+	font-size: 36px;
+}
+
+input[type=text]#SearchName:focus, textarea#SearchName:focus{ 
+	background: rgb(165, 115, 10);
+	border-bottom: 2px solid rgb(165, 115, 10);
+}
+
+.SearchNameBTN {
+	width: 100%;
+	height: 10vh;
+	border: 0;
+	background:#53B4B8;
+  	color: #FAFAFA;
+	font-size: 36px;
+	font-weight: 700;
+}
+.SearchNameBTN:hover {
+	background:#69A197;
+}
+
+
+.nimmyResult {
+	text-transform: uppercase;
+}
+
+.nimmyResultBG {
+  display: inline-block;
+  background: rgba(202, 144, 29, .75);
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 1;
+  color: #fafafa;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+.nimmyResultBG:last-child {
+	margin-bottom: 0;
+}
+
+.mainFooter {
+	margin-top: 10vh;
+	  padding-bottom: 20px;
+}
+
+.mainFooter h5, .footerNav {
+	font-size: 11px;
+	text-align: center;
+	margin: 0;
+}
+
+.mainFooter h5 {
+	font-weight: 700;
+	color: #575236;
+}
+
+.footerNav {
+	list-style: none;
+	padding: 0;
+}
+
+.footerNav li {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: 700;
+}
+
+.chargesList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.chargesListSection.row {
+	margin-top: 5vh;
+}
+
+.chargesList li {
+	display: inline-block;
+	background: #E09E11;
+  padding: 5px 15px;
+  margin: 10px;
+}
+
+.nimmyOtherBTN {
+	width: 100%;
+  display: block;
+  text-align: center;
+  	background:#53B4B8;
+  	color: #FAFAFA;
+  	font-weight: 700;
+  	font-size: 1.75rem;
+  padding: 10px;
+}
+
+.nimmyOtherBTN:hover {
+	background:#69A197;
+}
+
+.mainFooter-div {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+
+

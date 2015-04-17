@@ -23,6 +23,7 @@ GEM
     json (1.8.2)
     minitest (5.6.0)
     multi_xml (0.5.5)
+    pg (0.18.1)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -41,4 +42,5 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   httparty
+  pg
   sinatra

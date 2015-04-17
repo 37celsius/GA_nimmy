@@ -10,11 +10,11 @@ require 'httparty'
 # Connect to nameData.erb
 require_relative 'nameData'
 
-local_db_settings = (
+local_db_settings = {
   :adapter => 'postgresql',
   :username => 'ThirtySevenCelsiusAir', 
   :database => 'nimmy'
-)
+}
 
 
 # Close the Database so we will not lost the connection

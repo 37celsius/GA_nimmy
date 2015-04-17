@@ -5,16 +5,21 @@ require 'active_record'
 # HTTParty
 require 'httparty'
 # For checking things in terminal
-require 'pry'
+# require 'pry'
 
-# Connect to config.erb
-require_relative 'config'
 # Connect to nameData.erb
 require_relative 'nameData'
 
+local_db_settings = (
+  :adapter => 'postgresql',
+  :username => 'ThirtySevenCelsiusAir', 
+  :database => 'nimmy'
+)
+
+
 # Close the Database so we will not lost the connection
 after do
-	ActiveRecord::Base.connection.close
+	ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || local_db_settings)
 end
 
 # Link to the index page
@@ -26,10 +31,13 @@ end
 get '/name' do
 	if !params[:SearchName].nil? && !params[:SearchName].empty?
 
+		# Create an instant variable that can be access anywhere
+		# The instant variable finding the name from the user input in our NameData Class which connecting to the nimmy table
 		@result = NameData.find_by(name: params[:SearchName])
 
+
 		if !@result
-			# not found,  save
+
 			name = "https://gender-api.com/get?name=#{params[:SearchName]}&key=DsEvdqGvUAcfgdvkej"
 			age = "https://proapi.whitepages.com/2.1/person.json?api_key=4a8f78e11e2770a4a46bffe34a496d53&first_name=#{params[:SearchName]}"
 
